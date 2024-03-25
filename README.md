@@ -1,27 +1,22 @@
 # open3d-ros-helper
 
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
-[![PyPI version](https://badge.fury.io/py/open3d-ros-helper.svg)](https://badge.fury.io/py/open3d-ros-helper)
-[![PyPI license](https://img.shields.io/pypi/l/ansicolortags.svg)](https://pypi.python.org/pypi/open3d-ros-helper/)
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FSeungBack%2Fopen3d-ros-helper&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
-[![Python 2.7](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/release/python-270/)
-[![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/SeungBack/open3d-ros-helper/issues)
-
-
-- Helper for jointly using open3d and ROS
-- Easy conversion between ROS and open3d point cloud (supports both XYZ & XYZRGB point cloud)
+- Helper for jointly using Open3D and ROS
+- Easy conversion between ROS and Open3D point cloud (supports both XYZ & XYZRGB point cloud)
 - Easy conversion between ROS pose and transform 
+- This is an updated version that works with ROS Noetic. The Melodic version can be installed using pip, see here: [https://github.com/SeungBack/open3d-ros-helper](https://github.com/SeungBack/open3d-ros-helper)
 
 ## Dependencies
-- python 2.7
 - ros-numpy
-- open3d == 0.9 
+- open3d 
 
 ## Installation
+Installation instruction for how to install the package for ROS Noetic. Replace `YOUR_CATKIN_WS` with the correct path. 
 ```
-$ sudo apt install ros-melodic-ros-numpy
-$ pip2 install numpy open3d==0.9.0 opencv-python==4.2.0.32 pyrsistent==0.13
-$ pip2 install open3d_ros_helper
+$ cd ~/YOUR_CATKIN_WS/src
+$ git clone https://github.com/eric-wieser/ros_numpy.git
+$ git clone https://github.com/v4r-robohockey/open3d-ros-helper
+$ pip install open3d PyYAML
+$ cd .. && catkin build && source devel/setup.bash
 ```
 
 ## Usage
@@ -57,7 +52,7 @@ This project is licensed under the MIT License
 
 ## References
 Some codes are rewritten from
-- [pcl_herlper](https://github.com/udacity/RoboND-Perception-Exercises)
+- [pcl_helper](https://github.com/udacity/RoboND-Perception-Exercises)
 - [conversion b/w ros transforms](https://answers.ros.org/question/332407/transformstamped-to-transformation-matrix-python/)
 - [averaging-quaternion](https://github.com/christophhagen/averaging-quaternions)
 
