@@ -14,7 +14,7 @@ Installation instruction for how to install the package for ROS Noetic. Replace 
 ```
 $ cd ~/YOUR_CATKIN_WS/src
 $ git clone https://github.com/eric-wieser/ros_numpy.git
-$ git clone https://github.com/v4r-robohockey/open3d-ros-helper
+$ git clone https://github.com/v4r-robohockey/open3d-ros-helper.git
 $ pip install open3d PyYAML
 $ cd .. && catkin build && source devel/setup.bash
 ```

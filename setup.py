@@ -1,21 +1,11 @@
-import setuptools
+## ! DO NOT MANUALLY INVOKE THIS setup.py, USE CATKIN INSTEAD
 
-with open("README.md", "r") as fh:
-    long_description = fh.read()
+from distutils.core import setup
+from catkin_pkg.python_setup import generate_distutils_setup
 
-setuptools.setup(
-    name="open3d_ros_helper",
-    version="0.2.0.3",
-    author="Seunghyeok Back",
-    author_email="shback@gist.ac.kr",
-    description="A helper tool for jointly using open3d and ROS",
-    long_description=long_description,
-    long_description_content_type="text/markdown",
-    url="https://github.com/SeungBack/open3d-ros-helper",
-    packages=setuptools.find_packages(),
-    classifiers=[
-        "Programming Language :: Python :: 2.7",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-    ],
-)
+# fetch values from package.xml
+setup_args = generate_distutils_setup(
+    packages=['open3d_ros_helper'],
+    package_dir={'': 'src'})
+
+setup(**setup_args)
